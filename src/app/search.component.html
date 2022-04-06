@@ -1,0 +1,21 @@
+Enter your Post Id <input type="text" [(ngModel)]="pid" />
+<button (click)="searchComments()">Search</button>
+
+<table class="table table-striped">  
+    <thead>  
+        <tr>  
+            <th>cid</th>  
+            <th>pid</th>  
+            <th>commenter</th>  
+            <th>Comment</th>  
+        </tr>  
+    </thead>  
+    <tbody>  
+        <tr *ngFor="let comment of cmts">  
+            <td>{{comment.cid}}</td>  
+            <td>{{comment.pid}}</td>  
+            <td>{{comment.commenter}}</td>  
+            <td>{{comment.comment}}</td>  
+        </tr>  
+    </tbody>  
+</table>  
