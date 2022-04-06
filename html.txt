@@ -1,0 +1,6 @@
+[3:35 PM] Chilakam, DineshReddy
+<br><h3 align="center">LogIn To Account</h3><br><div style="height: 100%; width: 100%; justify-content: center; display: flex;">  <form style="width: fit-content;" [formGroup]="userForm">    <div class="mb-3">      <label class="form-label">Enter UserId</label>      <input type="text" class="form-control" name="userid" formControlName="userid">      <label *ngIf="userForm.get('userid')?.invalid">Userid should be min 4 max 8</label>    </div>
+
+[3:36 PM] Chilakam, DineshReddy
+    <div class="mb-3">      <label class="form-label">Password</label>      <input type="password" class="form-control" name="pass" formControlName="pass">      <label *ngIf="userForm.get('pass')?.invalid">Password should be greater than 6</label>    </div>    <button style="width: 100%;" type="button"  class="btn btn-primary" (click)="logIn()">LogIn</button>    <a style="justify-content: end;" routerLink="../register">Create New Account?</a>  </form></div>
+
